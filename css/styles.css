@@ -182,9 +182,14 @@ footer p {
     margin-bottom: 36px;
   }
 
+  /* 600px〜960pxのスタイル */
 } @media screen and (max-width:599px) {
   header,section,footer {
     margin: 0 auto;
     width: 96%;
+  }
+} @media screen and (max-width:480px) {
+  main img {
+    height: 570px;
   }
 }
