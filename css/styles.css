@@ -1,0 +1,190 @@
+/* いろいろ初期設定 */
+body {
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  margin:0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 全体の幅を設定 */
+header,section,footer {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* headerのスタイル */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+}
+
+header h1 img {
+  width: 120px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul li {
+  padding: 0 20px 0 0;
+}
+
+header nav ul li :hover {
+  opacity: 0.6;
+}
+
+/* メインビジュアルのスタイル */
+main img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* sectionで共通するスタイル */
+section {
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  text-align: center;
+  margin: 120px auto 60px auto;   
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
+  display: inline-block;
+}
+
+section h3 {
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 0 0 12px 0;
+}
+
+/* Aboutのスタイル */
+section .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .about-content p {
+  width:400px;
+}
+
+section .about-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 12px 12px 0 0;
+  /*↑中央揃えに見えないのでtopを設定*/
+}
+
+section .about-content .name-and-text {
+  text-align: left;
+  padding: auto;
+}
+
+/* Bicycleのスタイル */  
+section .bicycle-content ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section .bicycle-content li {
+  text-align: center;
+}
+
+section .bicycle-content img {
+  width:96%;
+  padding: 0 0 12px 0; 
+}
+
+footer p {
+  font-size:10px;
+  text-align: center;
+  margin: 120px auto 12px auto;
+}
+
+/* ブラウザ幅960px未満のスタイル */
+@media screen and (max-width:960px) {
+  
+  /* 〜960pxの全体幅 */
+  header,section,footer {
+    margin: 0 auto;
+    min-width: 90%;
+    max-width: 580px;
+  }
+
+  /* 〜960pxのメインビジュアル */
+  main img {
+    height: 916px;
+  }
+
+  /* 〜960pxのAbout */
+  section .about-content {
+    display: inline-block;
+    flex-direction: row;
+  }
+
+  section .about-content img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 0 0 12px 0;
+  }  
+
+  section .about-content .name-and-text h3 {
+    text-align: center;
+  }
+
+  section .about-content .name-and-text p {
+    width:80%;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  /* 〜960pxのBicycle */
+  section .bicycle-content ul {
+    display: inline-block;
+  }
+
+  section .bicycle-content p {
+    margin-bottom: 36px;
+  }
+
+} @media screen and (max-width:599px) {
+  header,section,footer {
+    margin: 0 auto;
+    width: 96%;
+  }
+}
